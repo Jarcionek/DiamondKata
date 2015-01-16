@@ -1,25 +1,23 @@
 package diamondkata;
 
-import com.google.common.collect.ImmutableList;
-
 import java.util.List;
 
 public class Diamond {
 
+    private static final DiamondGenerator DIAMOND_GENERATOR = new DiamondGenerator();
+
+    private final List<String> rows;
+
+    private Diamond(List<String> rows) {
+        this.rows = rows;
+    }
+
     public static Diamond newDiamond(char c) {
-        return new Diamond();
+        return new Diamond(DIAMOND_GENERATOR.generate(c));
     }
 
     public List<String> asListOfRows() {
-        return ImmutableList.of(
-                "   A   ",
-                "  B B  ",
-                " C   C ",
-                "D     D",
-                " C   C ",
-                "  B B  ",
-                "   A   "
-        );
+        return rows;
     }
 
 }
