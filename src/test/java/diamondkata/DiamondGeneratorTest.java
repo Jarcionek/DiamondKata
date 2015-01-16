@@ -3,9 +3,6 @@ package diamondkata;
 import com.shazam.shazamcrest.MatcherAssert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
-
 import java.util.List;
 
 import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
