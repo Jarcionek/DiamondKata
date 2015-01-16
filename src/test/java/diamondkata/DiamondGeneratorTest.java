@@ -32,6 +32,22 @@ public class DiamondGeneratorTest {
         MatcherAssert.assertThat(actualRows, is(sameBeanAs(expectedRows)));
     }
 
+    @Test
+    public void createsRowsForDiamondThreeByThreeForB() {
+        List<String> expectedRows = asList(
+                " A ",
+                "B B",
+                " A "
+        );
+        when(diamondRowGenerator.generate(rowNumber(0), rowLength(3))).thenReturn(" A ");
+        when(diamondRowGenerator.generate(rowNumber(1), rowLength(3))).thenReturn("B B");
+        when(diamondRowGenerator.generate(rowNumber(2), rowLength(3))).thenReturn(" A ");
+
+        List<String> actualRows = diamondGenerator.generate('B');
+
+        MatcherAssert.assertThat(actualRows, is(sameBeanAs(expectedRows)));
+    }
+
 
     private static int rowNumber(int rowNumber) {
         return rowNumber;
