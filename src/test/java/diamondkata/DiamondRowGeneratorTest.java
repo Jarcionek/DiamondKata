@@ -24,6 +24,13 @@ public class DiamondRowGeneratorTest {
         assertThat(actualRow, is(equalTo(" A ")));
     }
 
+    @Test
+    public void returnsThirdRowOfDiamondFiveByFive() {
+        String actualRow = diamondRowGenerator.generate(rowNumber(2), rowLength(5));
+
+        assertThat(actualRow, is(equalTo("C   C")));
+    }
+
 
     private static int rowNumber(int rowNumber) {
         return rowNumber;
