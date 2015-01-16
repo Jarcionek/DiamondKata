@@ -8,6 +8,10 @@ public class DiamondRowGenerator {
         char[] array = new char[rowLength];
         Arrays.fill(array, ' ');
 
+        if (rowNumber > rowLength / 2) {
+            rowNumber = rowLength - 1 - rowNumber;
+        }
+
         char character = (char) ('A' + rowNumber);
 
         array[rowLength / 2 - rowNumber] = character;
