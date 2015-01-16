@@ -6,6 +6,7 @@ import java.util.List;
 
 import static com.shazam.shazamcrest.MatcherAssert.assertThat;
 import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
+import static diamondkata.Diamond.newDiamond;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 
@@ -23,7 +24,7 @@ public class DiamondTest {
                 "   A   "
         );
 
-        Diamond diamond = Diamond.newDiamond('D');
+        Diamond diamond = newDiamond('D');
 
         assertThat(diamond.asListOfRows(), is(sameBeanAs(expectedRows)));
     }

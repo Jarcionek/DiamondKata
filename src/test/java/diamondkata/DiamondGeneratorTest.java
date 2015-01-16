@@ -1,10 +1,10 @@
 package diamondkata;
 
-import com.shazam.shazamcrest.MatcherAssert;
 import org.junit.Test;
 
 import java.util.List;
 
+import static com.shazam.shazamcrest.MatcherAssert.assertThat;
 import static com.shazam.shazamcrest.matcher.Matchers.sameBeanAs;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
@@ -26,7 +26,7 @@ public class DiamondGeneratorTest {
 
         List<String> actualRows = diamondGenerator.generate('A');
 
-        MatcherAssert.assertThat(actualRows, is(sameBeanAs(expectedRows)));
+        assertThat(actualRows, is(sameBeanAs(expectedRows)));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class DiamondGeneratorTest {
 
         List<String> actualRows = diamondGenerator.generate('B');
 
-        MatcherAssert.assertThat(actualRows, is(sameBeanAs(expectedRows)));
+        assertThat(actualRows, is(sameBeanAs(expectedRows)));
     }
 
 
