@@ -18,7 +18,7 @@ public class DiamondGeneratorTest {
 
     private final DiamondRowGenerator diamondRowGenerator = mock(DiamondRowGenerator.class);
 
-    private final DiamondGenerator diamondGenerator = new DiamondGenerator();
+    private final DiamondGenerator diamondGenerator = new DiamondGenerator(diamondRowGenerator);
 
     @Test
     public void createsRowsForDiamondOneByOneForA() {
