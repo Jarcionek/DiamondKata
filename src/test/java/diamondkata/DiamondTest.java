@@ -23,7 +23,7 @@ public class DiamondTest {
                 "   A   "
         );
 
-        Diamond diamond = Diamond.newDiamond('A');
+        Diamond diamond = Diamond.newDiamond('D');
 
         assertThat(diamond.asListOfRows(), is(sameBeanAs(expectedRows)));
     }
