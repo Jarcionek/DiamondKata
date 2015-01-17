@@ -8,14 +8,17 @@ public class DiamondRowGenerator {
         char[] array = new char[rowLength];
         Arrays.fill(array, ' ');
 
-        if (rowNumber > rowLength / 2) {
-            rowNumber = rowLength - 1 - rowNumber;
+        int distanceFromCentre;
+        if (rowNumber <= rowLength / 2) {
+            distanceFromCentre = rowNumber;
+        } else {
+            distanceFromCentre = rowLength - 1 - rowNumber;
         }
 
-        char character = (char) ('A' + rowNumber);
+        char character = (char) ('A' + distanceFromCentre);
 
-        array[rowLength / 2 - rowNumber] = character;
-        array[rowLength / 2 + rowNumber] = character;
+        array[rowLength / 2 - distanceFromCentre] = character;
+        array[rowLength / 2 + distanceFromCentre] = character;
 
         return new String(array);
     }
