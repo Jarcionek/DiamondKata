@@ -12,34 +12,34 @@ public class DiamondRowGeneratorTest {
 
     @Test
     public void returnsFirstRowOfDiamondOneByOne() {
-        String actualRow = diamondRowGenerator.generate(rowNumber(0), rowLength(1));
+        String actualRow = diamondRowGenerator.generate(rowIndex(0), rowLength(1));
 
         assertThat(actualRow, is(equalTo("A")));
     }
 
     @Test
     public void returnsFirstRowOfDiamondThreeByThree() {
-        String actualRow = diamondRowGenerator.generate(rowNumber(0), rowLength(3));
+        String actualRow = diamondRowGenerator.generate(rowIndex(0), rowLength(3));
 
         assertThat(actualRow, is(equalTo(" A ")));
     }
 
     @Test
     public void returnsThirdRowOfDiamondFiveByFive() {
-        String actualRow = diamondRowGenerator.generate(rowNumber(2), rowLength(5));
+        String actualRow = diamondRowGenerator.generate(rowIndex(2), rowLength(5));
 
         assertThat(actualRow, is(equalTo("C   C")));
     }
 
     @Test
     public void returnsFourthRowOfDiamondFiveByFive() {
-        String actualRow = diamondRowGenerator.generate(rowNumber(3), rowLength(5));
+        String actualRow = diamondRowGenerator.generate(rowIndex(3), rowLength(5));
 
         assertThat(actualRow, is(equalTo(" B B ")));
     }
 
 
-    private static int rowNumber(int rowNumber) {
+    private static int rowIndex(int rowNumber) {
         return rowNumber;
     }
 

@@ -22,7 +22,7 @@ public class DiamondGeneratorTest {
         List<String> expectedRows = asList(
                 "A"
         );
-        when(diamondRowGenerator.generate(rowNumber(0), rowLength(1))).thenReturn("A");
+        when(diamondRowGenerator.generate(rowIndex(0), rowLength(1))).thenReturn("A");
 
         List<String> actualRows = diamondGenerator.generate('A');
 
@@ -36,9 +36,9 @@ public class DiamondGeneratorTest {
                 "B B",
                 " A "
         );
-        when(diamondRowGenerator.generate(rowNumber(0), rowLength(3))).thenReturn(" A ");
-        when(diamondRowGenerator.generate(rowNumber(1), rowLength(3))).thenReturn("B B");
-        when(diamondRowGenerator.generate(rowNumber(2), rowLength(3))).thenReturn(" A ");
+        when(diamondRowGenerator.generate(rowIndex(0), rowLength(3))).thenReturn(" A ");
+        when(diamondRowGenerator.generate(rowIndex(1), rowLength(3))).thenReturn("B B");
+        when(diamondRowGenerator.generate(rowIndex(2), rowLength(3))).thenReturn(" A ");
 
         List<String> actualRows = diamondGenerator.generate('B');
 
@@ -46,7 +46,7 @@ public class DiamondGeneratorTest {
     }
 
 
-    private static int rowNumber(int rowNumber) {
+    private static int rowIndex(int rowNumber) {
         return rowNumber;
     }
 

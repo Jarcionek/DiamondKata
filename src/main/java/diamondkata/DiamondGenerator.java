@@ -12,11 +12,11 @@ public class DiamondGenerator {
     }
 
     public List<String> generate(char c) {
-        int size = (c - 'A') * 2 + 1;
+        int diamondSize = (c - 'A') * 2 + 1;
 
-        List<String> rows = new ArrayList<>(size);
-        for (int i = 0; i < size; i++) {
-            rows.add(diamondRowGenerator.generate(i, size));
+        List<String> rows = new ArrayList<>(diamondSize);
+        for (int rowIndex = 0; rowIndex < diamondSize; rowIndex++) {
+            rows.add(diamondRowGenerator.generate(rowIndex, diamondSize));
         }
         return rows;
     }
