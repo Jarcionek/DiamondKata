@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Diamond {
 
-    private static final DiamondGenerator DIAMOND_GENERATOR = new DiamondGenerator(new DiamondRowGenerator());
+    private static final DiamondGenerator DIAMOND_GENERATOR = new DiamondGenerator();
 
     private final List<String> rows;
 
